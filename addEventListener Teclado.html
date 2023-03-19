@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplos de addEventListener de teclado</title>
+  </head>
+  <body>
+    <h1>Exemplos de addEventListener de teclado</h1>
+
+    <p>Clique em uma tecla para ver o resultado:</p>
+
+    <div id="resultado"></div>
+
+    <script>
+      const resultado = document.querySelector("#resultado");
+
+      document.addEventListener("keydown", function(event) {
+        resultado.innerHTML = `Tecla pressionada: ${event.key}`;
+      });
+
+      document.addEventListener("keyup", function(event) {
+        resultado.innerHTML = `Tecla solta: ${event.key}`;
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplos de addEventListener de mouse</title>
+  </head>
+  <body>
+    <h1>Exemplos de addEventListener de mouse</h1>
+
+    <p>Move o mouse sobre o texto abaixo:</p>
+
+    <div id="exemplo">
+      <p>Este é um exemplo de texto</p>
+    </div>
+
+    <script>
+      const exemplo = document.querySelector("#exemplo");
+
+      exemplo.addEventListener("mouseover", function() {
+        exemplo.style.backgroundColor = "orange";
+      });
+
+      exemplo.addEventListener("mouseout", function() {
+        exemplo.style.backgroundColor = "";
+      });
+
+      exemplo.addEventListener("mousedown", function() {
+        exemplo.style.color = "white";
+        exemplo.style.backgroundColor = "black";
+      });
+
+      exemplo.addEventListener("mouseup", function() {
+        exemplo.style.color = "";
+        exemplo.style.backgroundColor = "";
+      });
+    </script>
+  </body>
+</html>
